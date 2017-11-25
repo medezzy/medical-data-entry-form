@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.IndicationsController">
+    <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+    <stylesheets>
+        <URL value="@Login.css" />
+    </stylesheets>
+    <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+  <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+  </rowConstraints>
+   <children>
+      <Label text="Add Indications and Dosage" GridPane.columnSpan="2" id="welcome-text"/>
+      <Label text="Route" GridPane.rowIndex="1"/>
+       <TextField fx:id="routeText" promptText="Route" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+       <Label text="Dosage" GridPane.rowIndex="2" />
+      <TextArea fx:id="dosageText" prefHeight="140.0" prefWidth="300.0" promptText="Dosage" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Comments" GridPane.rowIndex="3" />
+      <TextArea fx:id="otherCommentsText" prefHeight="200.0" prefWidth="200.0" promptText="Other Comments" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="129.0" text="Add" />
+            <Button fx:id="resetAll" mnemonicParsing="false" onAction="#handleResetButton" prefHeight="25.0" prefWidth="113.0" text="Reset All" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</GridPane>
